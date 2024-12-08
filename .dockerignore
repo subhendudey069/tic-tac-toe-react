@@ -1,0 +1,46 @@
+# Node.js dependencies (reinstalled during image build)
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Build artifacts
+build
+dist
+
+# Logs
+logs
+*.log
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# IDE and editor files
+.vscode
+.idea
+*.swp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Git files
+.git
+.gitignore
+
+# Docker files
+.dockerignore
+
+# Temporary files and folders
+tmp
+temp
+*.tmp
+*.temp
+
+# Test and coverage reports
+coverage
+*.spec.js
+*.test.js

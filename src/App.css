@@ -1,0 +1,43 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Center the grid vertically */
+  margin: 0;
+  text-align: center;
+}
+
+.board-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr)); /* Responsive grid */
+  gap: 10px;
+  width: 90vw; /* Take up most of the viewport width */
+  max-width: 600px; /* Limit maximum grid width */
+}
+
+.board-cell {
+  background-color: aliceblue;
+  border: 2px solid black; /* Make the border more visible */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(1rem + 2.5vw); /* Responsive font size */
+  aspect-ratio: 1; /* Ensure buttons are square */
+  cursor: pointer; /* Show pointer cursor for buttons */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Add hover effect */
+}
+
+.board-cell:hover {
+  background-color: #ccc; 
+  /* transform: scale(1.01);  */
+}
+
+.board-cell:active {
+  transform: scale(0.95); /* Add a press effect */
+}
+
+.title {
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
