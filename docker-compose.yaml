@@ -10,5 +10,5 @@ services:
     build:
       context: .               # Use the current directory as the build context
     ports:
-      - "6906:5173"            # Map port 3000 on the host to port 3000 in the container
+      - "6906:5173"            
     container_name: tic-tac-toe-react
