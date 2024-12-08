@@ -1,0 +1,14 @@
+x-logging: &default-logging
+  options:
+    max-size: "50m"
+    max-file: "2"
+    compress: "true"
+  driver: local
+  
+services:
+  app:
+    build:
+      context: .               # Use the current directory as the build context
+    ports:
+      - "6906:5173"            # Map port 3000 on the host to port 3000 in the container
+    container_name: pass_generator
