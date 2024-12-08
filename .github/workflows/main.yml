@@ -13,4 +13,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build and Deploy
-      run: docker build -t tic-tac-toe:latest .; docker run -d -p 6906:5173 --name tic-tac-toe-react tic-tac-toe:latest;
+      run: docker compose build; docker compose up -d
