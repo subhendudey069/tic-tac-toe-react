@@ -1,14 +1,23 @@
+version: '3.8'  # Specify the version of Docker Compose
+
 x-logging: &default-logging
   options:
     max-size: "50m"
     max-file: "2"
     compress: "true"
   driver: local
-  
+
 services:
-  app:
+  tic-tac-toe-react:  # Changed service name to be descriptive
     build:
       context: .               # Use the current directory as the build context
     ports:
       - "6906:5173"            
     container_name: tic-tac-toe-react
+    logging: *default-logging  # Apply the logging configuration
+    restart: unless-stopped     # Restart policy (optional)
+    environment:
+      - NODE_ENV=development     # Set environment variable (optional)
+    # Uncomment the lines below to mount a volume for live reloading
+    # volumes:
+    #   - .:/App  # Mount current directory to /App in the container
